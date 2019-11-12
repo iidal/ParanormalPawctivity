@@ -5,29 +5,20 @@ using UnityEngine;
 public class PlayerActionManager : MonoBehaviour
 {
 
+  
     public ItemManager currentHighlightedItem; //item in flashlight area
-    
-
-    void Start()
-    {
-        
-    }
-
-    public void TakeAction(){   //when action button is pressed
-        if(currentHighlightedItem != null){
-            currentHighlightedItem.ShowInfo();
-        }
-    }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.tag == "PickUp"){
+        if(other.gameObject.tag == "Item"){
             currentHighlightedItem = other.gameObject.GetComponent<ItemManager>();
+            PlayerManager.instance.currentItem = currentHighlightedItem;
             Debug.Log("item found");
         }
     }
     void OnTriggerExit2D(Collider2D other){
-         if(other.gameObject.tag == "PickUp"){
+         if(other.gameObject.tag == "Item"){
             currentHighlightedItem = null;
+            PlayerManager.instance.currentItem = null;
             Debug.Log("item ignored");
         }
     }

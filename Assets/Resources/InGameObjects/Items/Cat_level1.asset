@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0914001c578fffd4584ad830d172e526, type: 3}
   m_Name: Cat_level1
   m_EditorClassIdentifier: 
-  pickUpable: 0
+  pickUpable: 1
   itemName: Kitty Cat
   imageFileName: level-1-item-cat
   itemDescription: a superb kitty 11/10 nothing paranormal here

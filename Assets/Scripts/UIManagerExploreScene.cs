@@ -8,12 +8,14 @@ public class UIManagerExploreScene : MonoBehaviour
 {
     public static UIManagerExploreScene instance;
 
-    [Header ("Infopanel for in game items")]
+    [Header("Infopanel for in game items")]
     public GameObject infoPanel;
     public TextMeshProUGUI infoItemName;
     public TextMeshProUGUI infoItemInfo;
     public Image infoItemSprite;
-    // Start is called before the first frame update
+    public Button pickUpButton;
+    
+    
     private void Awake()
     {
         if (instance != null)
@@ -22,11 +24,20 @@ public class UIManagerExploreScene : MonoBehaviour
             instance = this;
     }
 
-    public void ShowPanel(string name, string info, Sprite sprite)
+    public void ShowPanel(string name, string info, Sprite sprite, bool pickUp)
     {
         infoItemName.text = name;
         infoItemInfo.text = info;
         infoItemSprite.sprite = sprite;
+        if (pickUp)
+        {
+            pickUpButton.interactable = true;
+        }
+        else
+        {
+            pickUpButton.interactable = false;
+        }
         infoPanel.SetActive(true);
+
     }
 }
