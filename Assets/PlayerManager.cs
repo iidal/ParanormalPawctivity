@@ -6,8 +6,12 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance;
     public GameObject playerPrefab;
+    public GameObject player;
     GameObject spawnPosition;
+
+    [Header("Items the player interacts with in the game")]
     public ItemManager currentItem;
+    public DoorController door;
     void Start()
     {
         if (instance != null)
@@ -22,6 +26,9 @@ public class PlayerManager : MonoBehaviour
         if(currentItem!= null){
             currentItem.ShowInfo();
         }
+        else if(door != null){
+            door.CheckAndOpen();
+        }
     }
     public void ItemPickUp(){
         Debug.Log("item picked up");
@@ -31,6 +38,6 @@ public class PlayerManager : MonoBehaviour
 
     public void LoadPlayer(){
         spawnPosition = GameObject.Find("PlayerSpawnPosition");
-        Instantiate(playerPrefab, spawnPosition.transform.position, Quaternion.identity);
+        player = Instantiate(playerPrefab, spawnPosition.transform.position, Quaternion.identity);
     }
 }

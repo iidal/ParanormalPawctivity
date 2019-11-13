@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8624315654914547297}
   m_Layer: 0
   m_Name: Flashlight
-  m_TagString: Untagged
+  m_TagString: PlayerFlashlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979bd91ef9a8f8f44bf666634eceb407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
   currentHighlightedItem: {fileID: 0}
 --- !u!1 &8624315655235074490
 GameObject:
@@ -289,7 +288,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: fe9cf92a725d184468ed4e836c23fc43, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -380,7 +379,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: fca54003c63ad204cae2e6f25d765ae4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -460,7 +459,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 8c07bdc253ada1a42876ab2062b14d77, type: 3}
   m_Color: {r: 0.6037736, g: 0.17372729, b: 0.3885462, a: 1}
   m_FlipX: 0
