@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0914001c578fffd4584ad830d172e526, type: 3}
-  m_Name: Cat_level1
+  m_Name: Matches_level1
   m_EditorClassIdentifier: 
-  pickUpable: 0
-  itemName: Kitty Cat
-  imageFileName: level-1-item-cat
-  itemDescription: a superb kitty 11/10 nothing paranormal here
+  pickUpable: 1
+  itemName: Matches
+  imageFileName: level-1-item-matches
+  itemDescription: A box of matches, maybe these can be used to light something on
+    fire (like candles)
