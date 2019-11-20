@@ -55,7 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DoorController.cs" />
      <Compile Include="Assets\Fungus\Scripts\Commands\Break.cs" />
      <Compile Include="Assets\Fungus\Scripts\Commands\Call.cs" />
      <Compile Include="Assets\Fungus\Scripts\Commands\CallMethod.cs" />
@@ -610,15 +609,19 @@
      <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\SimpleMouseLook.cs" />
      <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
      <Compile Include="Assets\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
-     <Compile Include="Assets\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\FlashlightController.cs" />
+     <Compile Include="Assets\Scripts\DoorController.cs" />
      <Compile Include="Assets\Scripts\GameManagerExploreScene.cs" />
-     <Compile Include="Assets\Scripts\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\InteractiveItem.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\ItemManager.cs" />
      <Compile Include="Assets\Scripts\ItemObject.cs" />
-     <Compile Include="Assets\Scripts\PlayerActionManager.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovementController.cs" />
+     <Compile Include="Assets\Scripts\LoadScene.cs" />
+     <Compile Include="Assets\Scripts\MiniPuzzleManager.cs" />
+     <Compile Include="Assets\Scripts\Player and flashlight\FlashlightController.cs" />
+     <Compile Include="Assets\Scripts\Player and flashlight\PlayerActionManager.cs" />
+     <Compile Include="Assets\Scripts\Player and flashlight\PlayerManager.cs" />
+     <Compile Include="Assets\Scripts\Player and flashlight\PlayerMovementController.cs" />
      <Compile Include="Assets\Scripts\UIManagerExploreScene.cs" />
      <None Include="Assets\Fungus\Thirdparty\ThirdPartyNotices.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

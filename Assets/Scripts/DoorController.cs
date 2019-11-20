@@ -8,8 +8,9 @@ public class DoorController : MonoBehaviour
     Transform nextPosition;
     [SerializeField]
     Transform nextCameraPosition;
+
     [SerializeField]
-    string keyObject;
+    string keyObject;   //what item is needed to open the door
     void Start()
     {
         
@@ -26,6 +27,9 @@ public class DoorController : MonoBehaviour
         PlayerManager.instance.player.transform.position = nextPosition.position;
         CameraController.instance.UpdatePosition(nextCameraPosition.position);
     }
+
+
+    
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag =="PlayerFlashlight"){

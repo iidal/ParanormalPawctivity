@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     [Header("Items the player interacts with in the game")]
     public ItemManager currentItem;
     public DoorController door;
+    public InteractiveItem interactiveItem;
     void Start()
     {
         if (instance != null)
@@ -25,6 +26,9 @@ public class PlayerManager : MonoBehaviour
 
         if(currentItem!= null){
             currentItem.ShowInfo();
+        }
+        else if(interactiveItem != null){
+            interactiveItem.CheckIfPlayerHasItem();
         }
         else if(door != null){
             door.CheckAndOpen();

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ItemManager : MonoBehaviour
 {
+    //items that can be picked up or give information
+
     public ItemObject itemInfo;
     bool pickUp; // false == info item, true == add to inventory (if wanted)
     string itemName;
