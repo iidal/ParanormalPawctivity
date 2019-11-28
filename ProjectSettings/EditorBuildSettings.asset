@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 85542de7032db0745b37d7ee80f22d9c
   - enabled: 1
-    path: Assets/Scenes/Dialog.unity
+    path: Assets/Scenes/DialogAndBattle.unity
     guid: 2cf6965a050cc7e4ea211eb57a45857e
   m_configObjects: {}

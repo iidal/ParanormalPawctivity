@@ -609,6 +609,10 @@
      <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\SimpleMouseLook.cs" />
      <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
      <Compile Include="Assets\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
+     <Compile Include="Assets\InvaderBlockController.cs" />
+     <Compile Include="Assets\InvaderBlockManager.cs" />
+     <Compile Include="Assets\ProjectileController.cs" />
+     <Compile Include="Assets\Scripts\BattleScene\InvaderGame\InvaderPlayerController.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\DoorController.cs" />
      <Compile Include="Assets\Scripts\GameManagerExploreScene.cs" />
