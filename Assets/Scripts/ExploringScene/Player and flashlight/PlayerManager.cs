@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour
     public ItemManager currentItem;
     public DoorController door;
     public InteractiveItem interactiveItem;
+    public EnemyControllerExploreScene enemy;
     void Start()
     {
         if (instance != null)
@@ -32,6 +33,9 @@ public class PlayerManager : MonoBehaviour
         }
         else if(door != null){
             door.CheckAndOpen();
+        }
+        else if(enemy != null){
+            enemy.EncounterEnemy();
         }
     }
     public void ItemPickUp(){

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+For opening doors with key items, moving between rooms in the same scene
+*/
+
 public class DoorController : MonoBehaviour
 {
     [SerializeField]

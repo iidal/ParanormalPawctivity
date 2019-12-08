@@ -17,6 +17,7 @@ public class InvaderPlayerController : MonoBehaviour
     
     //Shooting
     public GameObject projectile;
+    public Transform bulletSpawn;
     
     void Start()
     {
@@ -64,14 +65,22 @@ public class InvaderPlayerController : MonoBehaviour
             {
                 targetX = barrierRight.position.x - 1;
             }
-
-            transform.position = new Vector3(Mathf.Lerp(transform.position.x, targetX, 1 * Time.deltaTime), transform.position.y, transform.position.z);
+            float dist = Vector3.Distance(transform.position, new Vector3(targetX, transform.position.y, transform.position.z));
+            transform.position = new Vector3(Mathf.Lerp(transform.position.x, targetX, 3 * Time.deltaTime), transform.position.y, transform.position.z);
 
         }
     }
     public void Shoot()
     {
-        Instantiate(projectile, transform.position, Quaternion.identity);
+        Instantiate(projectile, bulletSpawn.position, Quaternion.identity);
+    }
+
+    public void OnDeath(){
+
+        //"Destroy player"
+        //cue the losing animations
+        // show panels
+
     }
 
 

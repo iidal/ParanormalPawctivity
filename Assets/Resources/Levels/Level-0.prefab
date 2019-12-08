@@ -3023,6 +3023,7 @@ GameObject:
   - component: {fileID: 3111340995760458830}
   - component: {fileID: 2943272896329905446}
   - component: {fileID: 1543975199496092395}
+  - component: {fileID: 4057850542722423634}
   m_Layer: 0
   m_Name: Mister Satan
   m_TagString: Untagged
@@ -3130,7 +3131,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ea6a6b570e9914994e4cc072610cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultScene: Dialog
+  defaultScene: DialogAndBattle
+--- !u!114 &4057850542722423634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4457178615176190452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51dbc6ba8aafa5049b4494a64200ca5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyEncounter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1543975199496092395}
+        m_MethodName: LoadNewScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DialogAndBattle
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &8625930073049873198
 GameObject:
   m_ObjectHideFlags: 0
@@ -3292,6 +3321,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4649875
       objectReference: {fileID: 0}
+    - target: {fileID: 4840724711908331464, guid: 990159d9908a81b4b83d03229b84a73f,
+        type: 3}
+      propertyPath: itemInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 2dc178eabb9133346aae643f1ddab8e7,
+        type: 2}
     - target: {fileID: 4840724711908331466, guid: 990159d9908a81b4b83d03229b84a73f,
         type: 3}
       propertyPath: m_Sprite
@@ -3318,12 +3353,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.69
       objectReference: {fileID: 0}
-    - target: {fileID: 4840724711908331464, guid: 990159d9908a81b4b83d03229b84a73f,
-        type: 3}
-      propertyPath: itemInfo
-      value: 
-      objectReference: {fileID: 11400000, guid: 2dc178eabb9133346aae643f1ddab8e7,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 990159d9908a81b4b83d03229b84a73f, type: 3}
 --- !u!4 &4965470721937781492 stripped

@@ -10,14 +10,15 @@ public class ProjectileController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.up * 5;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
+    // void FixedUpdate()
+    // {
 
-        rb.AddForce(up, ForceMode2D.Impulse);
-    }
+    //     rb.AddForce(up, ForceMode2D.Impulse);
+    // }
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.tag == "Wall"){
