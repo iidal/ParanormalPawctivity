@@ -30,29 +30,7 @@ public class InvaderPlayerController : MonoBehaviour
             Shoot();
         }
 
-        // if (Input.touchCount > 0)
-        // {
-
-        //     Touch touch = Input.GetTouch(0);
-        //     pointOnWorld = cam.ScreenToWorldPoint(touch.position);
-        //     targetX = pointOnWorld.x;
-
-        // if (targetX < barrierLeft.position.x)
-        // {
-        //     targetX = barrierLeft.position.x + 1;
-        // }
-        // else if (targetX > barrierRight.position.x)
-        // {
-        //     targetX = barrierRight.position.x - 1;
-        // }
-
-        //     transform.position = new Vector3(Mathf.Lerp(transform.position.x, targetX, 1* Time.deltaTime),transform.position.y, transform.position.z);
-
-
-
-
-
-        // }
+        #if UNITY_STANDALONE_WIN || UNITY_EDITOR
         if (Input.GetMouseButton(0))
         {
             pointOnWorld = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -69,6 +47,31 @@ public class InvaderPlayerController : MonoBehaviour
             transform.position = new Vector3(Mathf.Lerp(transform.position.x, targetX, 3 * Time.deltaTime), transform.position.y, transform.position.z);
 
         }
+        #elif UNITY_ANDROID
+        if (Input.touchCount > 0)
+        {
+
+            Touch touch = Input.GetTouch(0);
+            pointOnWorld = cam.ScreenToWorldPoint(touch.position);
+            targetX = pointOnWorld.x;
+
+        if (targetX < barrierLeft.position.x)
+        {
+            targetX = barrierLeft.position.x + 1;
+        }
+        else if (targetX > barrierRight.position.x)
+        {
+            targetX = barrierRight.position.x - 1;
+        }
+
+            transform.position = new Vector3(Mathf.Lerp(transform.position.x, targetX, 1* Time.deltaTime),transform.position.y, transform.position.z);
+
+        }
+
+        
+       
+
+        #endif
     }
     public void Shoot()
     {
