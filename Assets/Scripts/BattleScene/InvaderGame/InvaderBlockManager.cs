@@ -27,8 +27,6 @@ public class InvaderBlockManager : MonoBehaviour
         }
 
         LoadRows();
-
-        Debug.Log("total: "+totalBlocks);
     }
 
     public void BlockDestroyed(){
